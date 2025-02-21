@@ -4,26 +4,46 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "dev": "vite --base=/kodiak",
+    "build:test": "tsc && NODE_ENV=development vite build --mode=test --base=/kodiak",
+    "build:prod": "tsc && vite build --base=/kodiak",
+    "preview": "vite preview",
+    "lint": "eslint ./src/",
+    "lint:fix": "eslint --fix ./src/"
   },
   "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.6",
+    "@mui/x-data-grid": "^6.0.3",
+    "@mui/x-date-pickers": "^6.18.3",
+    "@tanstack/react-query": "^4.24.4",
+    "@tanstack/react-query-devtools": "^4.24.4",
+    "@types/quill": "^2.0.14",
+    "axios": "^1.6.5",
+    "dayjs": "^1.11.10",
+    "jwt-decode": "^3.1.2",
+    "quill": "^2.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-error-boundary": "^4.0.10",
+    "react-hook-form": "^7.43.7",
+    "react-i18next": "^12.1.5",
+    "react-router-dom": "^6.7.0",
+    "react-to-print": "^2.14.15"
   },
   "devDependencies": {
-    "@eslint/js": "^9.19.0",
-    "@types/react": "^19.0.8",
-    "@types/react-dom": "^19.0.3",
-    "@vitejs/plugin-react": "^4.3.4",
-    "eslint": "^9.19.0",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-react-refresh": "^0.4.18",
-    "globals": "^15.14.0",
-    "typescript": "~5.7.2",
-    "typescript-eslint": "^8.22.0",
-    "vite": "^6.1.0"
+    "@types/node": "^18.14.6",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "eslint": "^8.38.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "typescript": "^4.9.3",
+    "vite": "^5.2.11"
   }
 }
